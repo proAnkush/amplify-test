@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {withAuthenticator} from "@aws-amplify/ui-react"
 
 function App() {
   return (
@@ -7,8 +9,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Some changes i made in v2
+          <h1>Auth implemented</h1>
         </p>
+          Some changes i made in v2
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,8 +21,9 @@ function App() {
           Learn React
         </a>
       </header>
+      
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator( App);
